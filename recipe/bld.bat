@@ -61,6 +61,7 @@ if not "%lapack_impl_lib%"=="notapplicable" (
 cmake -LAH -G Ninja .. ^
     "-DBLAS_LIBRARIES=blas.lib;cblas.lib" ^
     "-DLAPACK_LIBRARIES=lapack.lib;lapacke.lib" ^
+    -DBUILD_INDEX64_EXT_API=OFF ^
     -DBUILD_TESTING=yes ^
     -DPYTHON_EXECUTABLE=%PYTHON_EXEC% ^
     -DCMAKE_BUILD_TYPE=Release
